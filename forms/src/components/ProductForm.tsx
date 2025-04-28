@@ -47,21 +47,33 @@ export const ProductForm = () => {
   const validate = () => {
     console.log("Validerar");
 
+    let temp = [...errors];
+
     if (product.name.length < 3) {
-      setErrors([
-        ...errors,
-        { name: "name", error: "Öh, pucko, skriv in fler än 2 tecken" },
-      ]);
+      if (!temp.find((e) => e.type === "shortname"))
+        temp.push({
+          name: "name",
+          error: "Öh, pucko, skriv in fler än 2 tecken",
+          type: "shortname",
+        });
+    } else {
+      temp = temp.filter((e) => e.type !== "shortname");
     }
 
     if (product.name === "") {
       console.log("Set empty error");
 
-      setErrors([
-        ...errors,
-        { name: "name", error: "Detta får inte vara tomt..." },
-      ]);
+      if (!temp.find((e) => e.type === "emptyname"))
+        temp.push({
+          name: "name",
+          error: "Detta får inte vara tomt...",
+          type: "emptyname",
+        });
+    } else {
+      temp = temp.filter((e) => e.type !== "emptyname");
     }
+
+    setErrors(temp);
   };
 
   console.log(errors);
