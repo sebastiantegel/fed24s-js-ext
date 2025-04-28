@@ -30,7 +30,7 @@ export const ProductForm = () => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    if (errors.length === 0) {
+    if (validate()) {
       // fetch
       console.log("Submit done");
     }
@@ -77,6 +77,8 @@ export const ProductForm = () => {
     }
 
     setErrors(temp);
+    if (temp.length > 0) return false;
+    return true;
   };
 
   console.log(errors);
