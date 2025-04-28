@@ -30,7 +30,10 @@ export const ProductForm = () => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    console.log("Submit done");
+    if (errors.length === 0) {
+      // fetch
+      console.log("Submit done");
+    }
 
     // setProduct({...product, id: Date.now() });
     // const p = { ...product, id: Date.now() };
