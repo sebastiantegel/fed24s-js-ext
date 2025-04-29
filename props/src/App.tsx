@@ -16,6 +16,7 @@ function App() {
   return (
     <>
       <Parent />
+      {/* <ShowPerson person={me} /> */}
 
       <div className="persons">
         {persons.map((p) => (
