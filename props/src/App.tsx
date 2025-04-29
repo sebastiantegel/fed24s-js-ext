@@ -6,7 +6,7 @@ import { Person } from "./models/Person";
 
 function App() {
   // const me: Person = new Person("Sebastian", 45, true);
-  // const [me, setMe] = useState<Person>(new Person("Sebastian", 45, true));
+  const [me, setMe] = useState<Person>(new Person("Sebastian", 45, true));
   const [persons, setPersons] = useState<Person[]>([
     new Person("Sebastian", 45, true),
     new Person("Hanna", 45, true),
@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <Parent />
-      {/* <ShowPerson person={me} /> */}
+      <ShowPerson person={me} />
 
       <div className="persons">
         {persons.map((p) => (
