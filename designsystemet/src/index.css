@@ -1,0 +1,8 @@
+@import "@digi/arbetsformedlingen/dist/digi-arbetsformedlingen/digi-arbetsformedlingen.css";
+@import "@digi/arbetsformedlingen/dist/digi-arbetsformedlingen/fonts/src/fonts.css";
+
+:root {
+    --digi--color--background--primary: #ffff00;
+    --digi--color--background--inverted-1: purple;
+    --digi--color--background--inverted-6: #00ffff;
+}
