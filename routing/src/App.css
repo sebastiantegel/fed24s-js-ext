@@ -1,0 +1,27 @@
+#root {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+footer {
+  height: 200px;
+  width: 100%;
+  border-top: 1px solid white;
+}
+
+main {
+  flex: 1;
+  display: grid;
+  place-items: center;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+}
