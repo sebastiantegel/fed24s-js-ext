@@ -1,0 +1,22 @@
+nav {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      text-align: center;
+
+      a {
+        transition: border 0.2s ease-in-out;
+      }
+
+      a.active {
+        border-bottom: 1px solid white;
+      }
+    }
+  }
+}
