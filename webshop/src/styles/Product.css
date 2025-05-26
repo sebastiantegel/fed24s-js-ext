@@ -1,0 +1,24 @@
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 0 1rem;
+
+  .product {
+    width: 100%;
+    text-align: center;
+
+    .img-container {
+      width: 100%;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .price-container {
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+  }
+}
