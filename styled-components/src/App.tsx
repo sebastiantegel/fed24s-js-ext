@@ -10,6 +10,8 @@ function App() {
   const [products, dispatch] = useReducer(ProductReducer, []);
 
   useEffect(() => {
+    if (products.length > 0) return;
+
     const getData = async () => {
       const products = await getProducts();
 
@@ -18,8 +20,6 @@ function App() {
         payload: JSON.stringify(products),
       });
     };
-
-    if (products.length > 0) return;
 
     getData();
   });
