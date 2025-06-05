@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { CarContext } from "../contexts/CarContext";
+import { ActionTypes } from "../reducers/CarReducer";
 
 export const Cars = () => {
   const { cars, dispatch } = useContext(CarContext);
@@ -15,12 +16,16 @@ export const Cars = () => {
           <p>{c.mileage}</p>
           <button
             // action = { type: "REMOVED", payload: "Volvo" }
-            onClick={() => dispatch({ type: "REMOVED", payload: c.brand })}
+            onClick={() =>
+              dispatch({ type: ActionTypes.REMOVED, payload: c.brand })
+            }
           >
             Ta bort
           </button>
           <button
-            onClick={() => dispatch({ type: "DRIVEN", payload: c.brand })}
+            onClick={() =>
+              dispatch({ type: ActionTypes.DRIVEN, payload: c.brand })
+            }
           >
             Drive
           </button>
