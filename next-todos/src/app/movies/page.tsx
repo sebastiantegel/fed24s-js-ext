@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 type OmdbResponse = {
   Search: Movie[];
@@ -21,7 +22,12 @@ export default async function Movies() {
         <div key={movie.imdbID}>
           <h2>{movie.Title}</h2>
           <div>
-            <img src={movie.Poster} alt={movie.Title} />
+            <Image
+              src={movie.Poster}
+              alt={movie.Title}
+              width={200}
+              height={300}
+            />
           </div>
 
           <Link href={`/movies/${movie.imdbID}`}>View more</Link>
